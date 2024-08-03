@@ -12,6 +12,8 @@
   "block.mccourse.nether_black_opal_ore": "Nether Black Opal Ore",
   "block.mccourse.end_black_opal_ore": "End Black Opal Ore",
 
+  "block.mccourse.magic_block": "Magic Block",
+
   "itemGroup.mccourse.black_opal_items_tab": "Black Opal Items",
   "itemGroup.mccourse.black_opal_blocks_tab": "Black Opal Blocks"
 }

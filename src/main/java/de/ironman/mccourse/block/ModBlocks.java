@@ -1,6 +1,7 @@
 package de.ironman.mccourse.block;
 
 import de.ironman.mccourse.MCCourseMod;
+import de.ironman.mccourse.block.custom.MagicBlock;
 import de.ironman.mccourse.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -31,6 +32,9 @@ public class ModBlocks {
             () -> new DropExperienceBlock(UniformInt.of(1, 7), BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> END_BLACK_OPAL_ORE = registerBlock("end_black_opal_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 8), BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
 
 
 
