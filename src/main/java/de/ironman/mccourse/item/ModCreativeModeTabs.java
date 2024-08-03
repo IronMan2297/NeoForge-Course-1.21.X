@@ -30,7 +30,7 @@ public class ModCreativeModeTabs {
     public static final Supplier<CreativeModeTab> BLACK_OPAL_BLOCKS_TAB =
             CREATIVE_MODE_TABS.register("black_opal_blocks_tab", () -> CreativeModeTab.builder()
                     .title(Component.translatable("itemGroup.mccourse.black_opal_blocks_tab"))
-                    .icon(() -> new ItemStack(ModItems.RAW_BLACK_OPAL.get()))
+                    .icon(() -> new ItemStack(ModBlocks.BLACK_OPAL_BLOCK))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(MCCourseMod.MOD_ID, "black_opal_items_tab"))
                     .displayItems((pParameters, pOutput) -> {
                         pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
