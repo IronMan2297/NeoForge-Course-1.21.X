@@ -1,5 +1,6 @@
 package de.ironman.mccourse;
 
+import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -37,10 +38,10 @@ public class MCCourseMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
-        ModItems.register(modEventBus);
-
         ModCreativeModeTabs.register(modEventBus);
 
+        ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in.

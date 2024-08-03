@@ -1,6 +1,7 @@
 package de.ironman.mccourse.item;
 
 import de.ironman.mccourse.MCCourseMod;
+import de.ironman.mccourse.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -21,8 +22,8 @@ public class ModCreativeModeTabs {
                     .title(Component.translatable("itemGroup.mccourse.black_opal_items_tab"))
                     .icon(() -> new ItemStack(ModItems.BLACK_OPAL.get()))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(ModItems.BLACK_OPAL.get());
-                        pOutput.accept(ModItems.RAW_BLACK_OPAL.get());
+                        pOutput.accept(ModItems.BLACK_OPAL);
+                        pOutput.accept(ModItems.RAW_BLACK_OPAL);
 
                     }).build());
 
@@ -32,8 +33,8 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.RAW_BLACK_OPAL.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(MCCourseMod.MOD_ID, "black_opal_items_tab"))
                     .displayItems((pParameters, pOutput) -> {
-                        pOutput.accept(Blocks.ANDESITE);
-                        pOutput.accept(Blocks.DEEPSLATE_DIAMOND_ORE);
+                        pOutput.accept(ModBlocks.BLACK_OPAL_BLOCK);
+                        pOutput.accept(ModBlocks.RAW_BLACK_OPAL_BLOCK);
 
                     }).build());
 
