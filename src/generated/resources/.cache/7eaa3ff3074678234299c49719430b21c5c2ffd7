@@ -1,0 +1,4 @@
+// 1.21	2024-08-04T18:19:24.0473585	Tags for minecraft:block mod id mccourse
+18b23409581316e2da0495d8b7f8f4dc6261fef8 data/minecraft/tags/block/mineable/pickaxe.json
+fc7f6e0b47c942f225be58cda1dc1866022e2dcc data/minecraft/tags/block/needs_diamond_tool.json
+eafc7057b163001646e08a0dd8f7b69bc408eed2 data/minecraft/tags/block/needs_iron_tool.json
