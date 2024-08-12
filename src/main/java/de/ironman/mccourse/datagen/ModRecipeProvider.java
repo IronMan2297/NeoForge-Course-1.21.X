@@ -41,6 +41,9 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
         oreSmelting(recipeOutput, BLACK_OPAL_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_OPAL.get(), 0.25f, 200, "black_opal");
         oreBlasting(recipeOutput, BLACK_OPAL_SMELTABLES, RecipeCategory.MISC, ModItems.BLACK_OPAL.get(), 0.25f, 100, "black_opal");
 
+        stairBuilder(ModBlocks.BLACK_OPAL_STAIRS.get(), Ingredient.of(ModBlocks.BLACK_OPAL_BLOCK.get())).group("black_opal")
+                .unlockedBy("has_black_opal", has(ModBlocks.BLACK_OPAL_BLOCK.get())).save(recipeOutput);
+        slab(recipeOutput, RecipeCategory.BUILDING_BLOCKS, ModBlocks.BLACK_OPAL_SLAB.get(), ModBlocks.BLACK_OPAL_BLOCK.get());
     }
 
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
