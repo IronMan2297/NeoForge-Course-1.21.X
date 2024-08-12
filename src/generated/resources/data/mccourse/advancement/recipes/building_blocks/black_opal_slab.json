@@ -1,11 +1,11 @@
 {
   "parent": "minecraft:recipes/root",
   "criteria": {
-    "has_black_opal_block": {
+    "has_black_opal": {
       "conditions": {
         "items": [
           {
-            "items": "mccourse:black_opal_block"
+            "items": "mccourse:black_opal"
           }
         ]
       },
@@ -21,7 +21,7 @@
   "requirements": [
     [
       "has_the_recipe",
-      "has_black_opal_block"
+      "has_black_opal"
     ]
   ],
   "rewards": {

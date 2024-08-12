@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "mccourse:black_opal_stairs"
+        "recipe": "mccourse:black_opal_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
@@ -26,7 +26,7 @@
   ],
   "rewards": {
     "recipes": [
-      "mccourse:black_opal_stairs"
+      "mccourse:black_opal_wall"
     ]
   }
 }

@@ -1,10 +1,13 @@
-// 1.21	2024-08-12T20:16:10.8722412	Loot Tables
+// 1.21	2024-08-12T22:26:25.9482147	Loot Tables
 5bd3bb7304b3d56f341a1fa283ab1fd3b158e989 data/mccourse/loot_table/blocks/black_opal_block.json
 ec8eba19955dfbf511071d4e6bff1594e90aae93 data/mccourse/loot_table/blocks/black_opal_button.json
+d71a93272900d3eaaac0037727bc31218bbe7bf0 data/mccourse/loot_table/blocks/black_opal_fence.json
+f1847ce5ef46749b01d46c534ab752c4d09250f4 data/mccourse/loot_table/blocks/black_opal_fence_gate.json
 f18fa9e5e44fc71e1aa4499ef5485b765e692429 data/mccourse/loot_table/blocks/black_opal_ore.json
 0713a346260b527650ce640f18e8f2bab8f445a4 data/mccourse/loot_table/blocks/black_opal_pressure_plate.json
 c1bcded8838560db884dd1290769dcad10c23635 data/mccourse/loot_table/blocks/black_opal_slab.json
 4031d97fc4e40d2ff5d9663361a9aa1c5039b232 data/mccourse/loot_table/blocks/black_opal_stairs.json
+11ad661371a48c7e8517eb662c35c95ad4441308 data/mccourse/loot_table/blocks/black_opal_wall.json
 8b6627809f30ecdf7e83fdf5738c02d612a10ee4 data/mccourse/loot_table/blocks/deepslate_black_opal_ore.json
 eebab12d73c779e38f346c3a1a677c5f59d8806a data/mccourse/loot_table/blocks/end_black_opal_ore.json
 d6027ba6b4319c7e3e32b50aafa73ca9013af0be data/mccourse/loot_table/blocks/magic_block.json

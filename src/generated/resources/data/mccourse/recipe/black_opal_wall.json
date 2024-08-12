@@ -1,16 +1,17 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "redstone",
+  "category": "building",
   "key": {
     "#": {
       "item": "mccourse:black_opal"
     }
   },
   "pattern": [
-    "##"
+    "###",
+    "###"
   ],
   "result": {
-    "count": 1,
-    "id": "mccourse:black_opal_pressure_plate"
+    "count": 6,
+    "id": "mccourse:black_opal_wall"
   }
 }
