@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "key": {
+    "B": {
+      "item": "mccourse:black_opal"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    }
+  },
+  "pattern": [
+    " B ",
+    " S ",
+    " S "
+  ],
+  "result": {
+    "count": 1,
+    "id": "mccourse:black_opal_shovel"
+  }
+}
