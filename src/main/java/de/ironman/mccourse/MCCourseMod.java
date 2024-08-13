@@ -1,6 +1,7 @@
 package de.ironman.mccourse;
 
 import de.ironman.mccourse.block.ModBlocks;
+import de.ironman.mccourse.item.ModArmorMaterials;
 import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -42,6 +43,8 @@ public class MCCourseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModArmorMaterials.register(modEventBus);
 
 
         // Register ourselves for server and other game events we are interested in.
