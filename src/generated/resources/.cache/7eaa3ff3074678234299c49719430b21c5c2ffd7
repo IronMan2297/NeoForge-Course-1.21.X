@@ -1,5 +1,6 @@
-// 1.21	2024-08-13T00:10:17.9803513	Tags for minecraft:block mod id mccourse
+// 1.21	2024-08-13T22:04:09.3530554	Tags for minecraft:block mod id mccourse
 a0180c6dfed4eee6ffd11ee76664a9528362ca28 data/mccourse/tags/block/incorrect_for_black_opal_tool.json
+82362cfbd1836db13c7e9d36c8712821e795ac55 data/mccourse/tags/block/mineable/paxel.json
 32b13946c4cd1f944b029659ccce5fcb2adad4ff data/mccourse/tags/block/needs_black_opal_tool.json
 be3bcc39d2217b79e45cb9fd308c546e01202985 data/minecraft/tags/block/fences.json
 30f01eee2bc7837ca3d813ca22d93f0d17a915e5 data/minecraft/tags/block/fence_gates.json

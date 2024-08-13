@@ -1,4 +1,4 @@
-// 1.21	2024-08-13T00:49:01.6691726	Recipes
+// 1.21	2024-08-13T22:04:09.3560545	Recipes
 4958be86dc8ededa248e438f8ec77757340342d3 data/mccourse/advancement/recipes/building_blocks/black_opal_slab.json
 3a3b666387507279530912650089b8a21a8b6df6 data/mccourse/advancement/recipes/building_blocks/black_opal_stairs.json
 0b26e27c06143f06f353dc4e8bcf0a7803b1892f data/mccourse/advancement/recipes/building_blocks/black_opal_wall.json
@@ -24,6 +24,7 @@ fb41b02dcc21e8288fe3c7295780c900a3ac03d4 data/mccourse/advancement/recipes/redst
 8c6f692ba0c9ae759771f292a2fb695e0fdc102a data/mccourse/advancement/recipes/redstone/black_opal_trapdoor.json
 a053e548e07ef73d387408f80bad41e2716c72a2 data/mccourse/advancement/recipes/tools/black_opal_axe.json
 490935305983b60ad8010bf035d8b7a587733e3e data/mccourse/advancement/recipes/tools/black_opal_hoe.json
+95e57519eb45180567d83cc5ea53404950f60b13 data/mccourse/advancement/recipes/tools/black_opal_paxel.json
 a6c30b820a9843a6a5d0a569e9de6b960227baa2 data/mccourse/advancement/recipes/tools/black_opal_pickaxe.json
 d806aced27d4edd03ce288bde4b9d28b0a6bd336 data/mccourse/advancement/recipes/tools/black_opal_shovel.json
 993a0cf79913df21147a9b04e7021e0dbc0b8f61 data/mccourse/recipe/black_opal.json
@@ -45,6 +46,7 @@ e02db93eaa5b33dcfa652133cb3568d180b966d8 data/mccourse/recipe/black_opal_from_sm
 f31f9a4f353b4a3b575105bf6446412e0112e198 data/mccourse/recipe/black_opal_from_smelting_nether_black_opal_ore.json
 5b08a5a1b0db4aa665398cc5b29f8d2da35a17f8 data/mccourse/recipe/black_opal_from_smelting_raw_black_opal.json
 37b0b96b84b9c9ef0784be6cba36a5ff8e041c76 data/mccourse/recipe/black_opal_hoe.json
+7fef0afe6cace97feee62c1177b86c2cd7b5c251 data/mccourse/recipe/black_opal_paxel.json
 81d4e17748c903da037428aad97c51ae33eb35ef data/mccourse/recipe/black_opal_pickaxe.json
 f4e194ed2543de0b4ebde88d978fbc46f9dac828 data/mccourse/recipe/black_opal_pressure_plate.json
 282b175f66eb4ebda03ab18dc30432f1286d450b data/mccourse/recipe/black_opal_shovel.json

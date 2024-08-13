@@ -41,5 +41,10 @@ public class ModBlockTagProvider extends BlockTagsProvider {
         tag(BlockTags.WALLS).add(ModBlocks.BLACK_OPAL_WALL.get());
         tag(ModTags.Blocks.NEEDS_BLACK_OPAL_TOOL).addTag(BlockTags.NEEDS_IRON_TOOL);
         tag(ModTags.Blocks.INCORRECT_FOR_BLACK_OPAL_TOOL).addTag(BlockTags.INCORRECT_FOR_IRON_TOOL).remove(ModTags.Blocks.NEEDS_BLACK_OPAL_TOOL);
+
+        this.tag(ModTags.Blocks.PAXEL_MINEABLE)
+                .addTag(BlockTags.MINEABLE_WITH_PICKAXE)
+                .addTag(BlockTags.MINEABLE_WITH_AXE)
+                .addTag(BlockTags.MINEABLE_WITH_SHOVEL);
     }
 }
