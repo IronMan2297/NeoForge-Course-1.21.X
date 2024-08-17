@@ -45,6 +45,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         basicItem(ModItems.BLACK_OPAL_CHESTPLATE.get());
         basicItem(ModItems.BLACK_OPAL_LEGGINGS.get());
         basicItem(ModItems.BLACK_OPAL_BOOTS.get());
+
+        withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {
