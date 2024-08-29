@@ -44,6 +44,8 @@
   "block.mccourse.black_opal_door": "Black Opal Door",
   "block.mccourse.black_opal_trapdoor": "Black Opal Trapdoor",
 
+  "block.mccourse.black_opal_lamp": "Black Opal Lamp",
+
 
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",
   "tooltip.mccourse.chainsaw.tooltip.1": "This Chainsaw is awesome and will cut down trees!",
