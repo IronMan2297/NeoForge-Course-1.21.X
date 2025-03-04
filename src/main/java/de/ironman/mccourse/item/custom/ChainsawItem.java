@@ -1,5 +1,6 @@
 package de.ironman.mccourse.item.custom;
 
+import de.ironman.mccourse.component.ModDataComponentTypes;
 import net.minecraft.client.gui.screens.Screen;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
@@ -30,6 +31,8 @@ public class ChainsawItem extends Item {
 
                 pContext.getItemInHand().hurtAndBreak(1, ((ServerLevel) level), ((ServerPlayer) pContext.getPlayer()),
                         item -> pContext.getPlayer().onEquippedItemBroken(item, EquipmentSlot.MAINHAND));
+
+                pContext.getItemInHand().set(ModDataComponentTypes.COORDINATES.get(), pContext.getClickedPos());
             }
         }
 
@@ -43,6 +46,10 @@ public class ChainsawItem extends Item {
             tooltipComponents.add(Component.translatable("tooltip.mccourse.chainsaw.tooltip.2"));
         } else {
             tooltipComponents.add(Component.translatable("tooltip.mccourse.chainsaw.tooltip.shift"));
+        }
+
+        if(stack.get(ModDataComponentTypes.COORDINATES.get()) != null) {
+            tooltipComponents.add(Component.literal("Last Tree was chopped at " + stack.get(ModDataComponentTypes.COORDINATES)));
         }
 
         super.appendHoverText(stack, context, tooltipComponents, tooltipFlag);

@@ -70,6 +70,11 @@ public class ModItems {
             () -> new ModArmorItem(ModArmorMaterials.BLACK_OPAL, ArmorItem.Type.BOOTS,
                     new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(16))));
 
+    public static final DeferredItem<Item> METAL_DETECTOR = ITEMS.register("metal_detector",
+            () -> new MetalDetectorItem(new Item.Properties().durability(100)));
+    public static final DeferredItem<Item> DATA_TABLET = ITEMS.register("data_tablet",
+            () -> new DataTabletItem(new Item.Properties().stacksTo(1)));
+
     public static final DeferredItem<Item> PENGUIN_SPAWN_EGG = ITEMS.register("penguin_spawn_egg",
             () -> new DeferredSpawnEggItem(ModEntities.PENGUIN, 0xdebd47, 0xccbfbe,
                     new Item.Properties()));

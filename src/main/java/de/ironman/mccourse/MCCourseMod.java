@@ -1,6 +1,7 @@
 package de.ironman.mccourse;
 
 import de.ironman.mccourse.block.ModBlocks;
+import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.entity.ModEntities;
 import de.ironman.mccourse.entity.client.PenguinRenderer;
 import de.ironman.mccourse.item.ModArmorMaterials;
@@ -8,12 +9,10 @@ import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
 
-import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
@@ -49,6 +48,8 @@ public class MCCourseMod {
         ModBlocks.register(modEventBus);
 
         ModArmorMaterials.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         ModEntities.register(modEventBus);
 
