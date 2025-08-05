@@ -42,7 +42,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BLACK_OPAL_HAMMER);
 
         basicItem(ModItems.METAL_DETECTOR.get());
-        basicItem(ModItems.DATA_TABLET.get());
+        // basicItem(ModItems.DATA_TABLET.get());
 
         basicItem(ModItems.BLACK_OPAL_HELMET.get());
         basicItem(ModItems.BLACK_OPAL_CHESTPLATE.get());

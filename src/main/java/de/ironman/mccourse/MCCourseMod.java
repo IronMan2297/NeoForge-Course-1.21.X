@@ -7,6 +7,7 @@ import de.ironman.mccourse.entity.client.PenguinRenderer;
 import de.ironman.mccourse.item.ModArmorMaterials;
 import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
+import de.ironman.mccourse.util.ModItemProperties;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import org.slf4j.Logger;
@@ -98,7 +99,7 @@ public class MCCourseMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            EntityRenderers.register(ModEntities.PENGUIN.get(), PenguinRenderer::new);
+            ModItemProperties.addCustomItemProperties();
         }
     }
 }
