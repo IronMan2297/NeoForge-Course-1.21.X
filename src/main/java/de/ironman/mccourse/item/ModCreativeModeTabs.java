@@ -46,6 +46,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.METAL_DETECTOR);
                         pOutput.accept(ModItems.DATA_TABLET);
 
+                        pOutput.accept(ModItems.KAUPEN_BOW);
+
                         pOutput.accept(ModItems.PENGUIN_SPAWN_EGG);
 
                     }).build());
