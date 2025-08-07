@@ -57,6 +57,8 @@
   "block.mccourse.potted_petunia": "Potted Petunia",
   "block.mccourse.colored_leaves": "Colored Leaves",
 
+  "sounds.mccourse.chainsaw_cut": "Chainsaw Cutting Sound",
+  "sounds.mccourse.chainsaw_pull": "Chainsaw Pulling Sound",
 
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",
   "tooltip.mccourse.chainsaw.tooltip.1": "This Chainsaw is awesome and will cut down trees!",
