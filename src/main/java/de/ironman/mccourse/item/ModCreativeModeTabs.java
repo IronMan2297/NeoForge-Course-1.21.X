@@ -84,6 +84,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.BLACK_OPAL_LAMP);
 
+                        pOutput.accept(ModBlocks.PETUNIA);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {

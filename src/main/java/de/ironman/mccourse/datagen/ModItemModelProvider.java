@@ -51,7 +51,15 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.TOMATO_SEEDS.get());
 
+        flowerItem(ModBlocks.PETUNIA);
+
         withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
+    }
+
+    public void flowerItem(DeferredBlock<Block> block) {
+        this.withExistingParent(block.getId().getPath(), mcLoc("item/generated"))
+                .texture("layer0", ResourceLocation.fromNamespaceAndPath(MCCourseMod.MOD_ID,
+                        "block/" + block.getId().getPath()));
     }
 
     public void buttonItem(DeferredBlock<Block> block, DeferredBlock<Block> baseBlock) {

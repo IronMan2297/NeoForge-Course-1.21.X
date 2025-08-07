@@ -1,4 +1,4 @@
-// 1.21	2025-08-07T21:26:05.0007183	Loot Tables
+// 1.21	2025-08-07T22:03:33.2998904	Loot Tables
 5bd3bb7304b3d56f341a1fa283ab1fd3b158e989 data/mccourse/loot_table/blocks/black_opal_block.json
 ec8eba19955dfbf511071d4e6bff1594e90aae93 data/mccourse/loot_table/blocks/black_opal_button.json
 da418be8901cc141f05e499eaeab0f26172962ea data/mccourse/loot_table/blocks/black_opal_door.json
@@ -15,5 +15,7 @@ cb95bd09f5f411095434970da01857a4b3fdbf60 data/mccourse/loot_table/blocks/black_o
 eebab12d73c779e38f346c3a1a677c5f59d8806a data/mccourse/loot_table/blocks/end_black_opal_ore.json
 d6027ba6b4319c7e3e32b50aafa73ca9013af0be data/mccourse/loot_table/blocks/magic_block.json
 69bf6e294835d1b22fbe806b3573d3ea84dd25a4 data/mccourse/loot_table/blocks/nether_black_opal_ore.json
+6bcf023a1a1c4feac8eeafbd787f4e11ea4eb176 data/mccourse/loot_table/blocks/petunia.json
+bd3e7a21508676179b20fdd69e2c60054b3609d2 data/mccourse/loot_table/blocks/potted_petunia.json
 50415aed90ef076bc00ef891626fa6ef366aec46 data/mccourse/loot_table/blocks/raw_black_opal_block.json
 d863125e889ddd7f9d8f79cfd0dd6fb570d71639 data/mccourse/loot_table/blocks/tomato_crop.json

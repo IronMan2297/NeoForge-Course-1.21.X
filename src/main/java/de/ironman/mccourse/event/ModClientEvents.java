@@ -1,4 +1,4 @@
-package de.ironman.mccourse;
+package de.ironman.mccourse.event;
 
 import de.ironman.mccourse.MCCourseMod;
 import net.minecraft.world.item.BowItem;
