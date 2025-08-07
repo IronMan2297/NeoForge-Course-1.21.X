@@ -5,6 +5,7 @@ import de.ironman.mccourse.block.custom.BlackOpalLampBlock;
 import de.ironman.mccourse.block.custom.MagicBlock;
 import de.ironman.mccourse.block.custom.TomatoCropBlock;
 import de.ironman.mccourse.item.ModItems;
+import de.ironman.mccourse.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
@@ -33,16 +34,17 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
     public static final DeferredBlock<Block> DEEPSLATE_BLACK_OPAL_ORE = registerBlock("deepslate_black_opal_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 6),
-                    BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops()));
+                    BlockBehaviour.Properties.of().strength(6f).requiresCorrectToolForDrops().sound(SoundType.DEEPSLATE)));
     public static final DeferredBlock<Block> NETHER_BLACK_OPAL_ORE = registerBlock("nether_black_opal_ore",
             () -> new DropExperienceBlock(UniformInt.of(1, 7),
-                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+                    BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops().sound(SoundType.NETHERRACK)));
     public static final DeferredBlock<Block> END_BLACK_OPAL_ORE = registerBlock("end_black_opal_ore",
             () -> new DropExperienceBlock(UniformInt.of(3, 8),
                     BlockBehaviour.Properties.of().strength(5f).requiresCorrectToolForDrops()));
 
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
-            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops()));
+            () -> new MagicBlock(BlockBehaviour.Properties.of().strength(4f)
+                    .requiresCorrectToolForDrops().noLootTable().sound(ModSounds.MAGIC_BLOCK_SOUNDS)));
 
     public static final DeferredBlock<Block> BLACK_OPAL_STAIRS = registerBlock("black_opal_stairs",
             () -> new StairBlock(ModBlocks.BLACK_OPAL_BLOCK.get().defaultBlockState(),
