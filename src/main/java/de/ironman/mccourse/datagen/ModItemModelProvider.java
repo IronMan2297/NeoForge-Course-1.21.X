@@ -50,8 +50,9 @@ public class ModItemModelProvider extends ItemModelProvider {
         // basicItem(ModItems.DATA_TABLET.get());
 
         basicItem(ModItems.TOMATO_SEEDS.get());
-
         flowerItem(ModBlocks.PETUNIA);
+
+        basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
 
         withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }

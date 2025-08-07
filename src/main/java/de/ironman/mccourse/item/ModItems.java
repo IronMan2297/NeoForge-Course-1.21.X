@@ -4,6 +4,7 @@ import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.entity.ModEntities;
 import de.ironman.mccourse.item.custom.*;
+import de.ironman.mccourse.sound.ModSounds;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.*;
@@ -81,6 +82,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
             () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
+
+    public static final DeferredItem<Item> BAR_BRAWL_MUSIC_DISC = ITEMS.registerItem("bar_brawl_music_disc",
+            properties -> new Item(properties.jukeboxPlayable(ModSounds.BAR_BRAWL_KEY)));
 
     public static final DeferredItem<Item> PENGUIN_SPAWN_EGG = ITEMS.register("penguin_spawn_egg",
             () -> new DeferredSpawnEggItem(ModEntities.PENGUIN, 0xdebd47, 0xccbfbe,
