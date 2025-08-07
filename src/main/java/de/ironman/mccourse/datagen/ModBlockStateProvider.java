@@ -61,6 +61,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 models().cross(blockTexture(ModBlocks.PETUNIA.get()).getPath(), blockTexture(ModBlocks.PETUNIA.get())).renderType("cutout"));
         simpleBlock(ModBlocks.POTTED_PETUNIA.get(), models().singleTexture("potted_petunia", ResourceLocation.parse("flower_pot_cross"), "plant",
                 blockTexture(ModBlocks.PETUNIA.get())).renderType("cutout"));
+
+        leavesBlock(ModBlocks.COLORED_LEAVES);
     }
 
     private void customLamp() {
@@ -75,6 +77,12 @@ public class ModBlockStateProvider extends BlockStateProvider {
         });
         simpleBlockItem(ModBlocks.BLACK_OPAL_LAMP.get(), models().cubeAll("black_opal_lamp_on",
                 ResourceLocation.fromNamespaceAndPath(MCCourseMod.MOD_ID, "block/" + "black_opal_lamp_on")));
+    }
+
+    private void leavesBlock(DeferredBlock<Block> deferredBlock) {
+        simpleBlockWithItem(deferredBlock.get(),
+                models().singleTexture(deferredBlock.getId().getPath(), ResourceLocation.parse("minecraft:block/leaves"),
+                        "all", blockTexture(deferredBlock.get())).renderType("cutout"));
     }
 
     private void makeCrop(CropBlock block, String modelName, String textureName) {

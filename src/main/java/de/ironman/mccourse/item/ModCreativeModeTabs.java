@@ -85,6 +85,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.BLACK_OPAL_LAMP);
 
                         pOutput.accept(ModBlocks.PETUNIA);
+                        pOutput.accept(ModBlocks.COLORED_LEAVES);
 
                     }).build());
 

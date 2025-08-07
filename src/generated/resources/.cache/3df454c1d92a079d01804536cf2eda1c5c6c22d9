@@ -1,4 +1,4 @@
-// 1.21	2025-08-07T22:03:33.3078846	Block States: mccourse
+// 1.21	2025-08-07T22:13:18.6323366	Block States: mccourse
 b548ddf1ba2ad5a2d24ac1505a095060da0f300b assets/mccourse/blockstates/black_opal_block.json
 d9ba7c55bae42b6d6fadaef16516e5e401e50636 assets/mccourse/blockstates/black_opal_button.json
 9f1bfcba08c841bdbdb1099c9c5b9c6aeb22bcc9 assets/mccourse/blockstates/black_opal_door.json
@@ -11,6 +11,7 @@ e2b7597798ab27b4d66d71cdcc0056d1331a693b assets/mccourse/blockstates/black_opal_
 0616f39bd6edcd5952f53e79c6881350e9c3016f assets/mccourse/blockstates/black_opal_stairs.json
 95b95553215cc11c7486710707f511114d063dce assets/mccourse/blockstates/black_opal_trapdoor.json
 be95e9c05b17b375eb38929668f451d7cf211456 assets/mccourse/blockstates/black_opal_wall.json
+647acdc71f248fabd80972f5e8ec879675a5c424 assets/mccourse/blockstates/colored_leaves.json
 b6b4008041fc131ef640859c65601bbd79898384 assets/mccourse/blockstates/deepslate_black_opal_ore.json
 5328b75dafb566ea1b9f1a816f9ba5c3063320c3 assets/mccourse/blockstates/end_black_opal_ore.json
 bc7d21f942c84b754066fc4a8c9f34dc61953149 assets/mccourse/blockstates/magic_block.json
@@ -52,6 +53,7 @@ ceb85fbabd76399dabc8d6cc20f357a4ae0868a8 assets/mccourse/models/block/black_opal
 d3315bbf94651065488c3233eb298e710c5ab57d assets/mccourse/models/block/black_opal_wall_post.json
 0a2b7fc6cb102c1cd93752860f5669803fa99247 assets/mccourse/models/block/black_opal_wall_side.json
 aad34e0c40d36041da04e90471b6ad68b2fe89da assets/mccourse/models/block/black_opal_wall_side_tall.json
+7535404ed199e6fedc9694ca965197851dbde251 assets/mccourse/models/block/colored_leaves.json
 ed0fd3080a8fbc7873c792e25044bc9987d96614 assets/mccourse/models/block/deepslate_black_opal_ore.json
 a78aae73ec16f94dee90fcb169b0ea4d88e49307 assets/mccourse/models/block/end_black_opal_ore.json
 e3bea00dd7e933deb59eaf492b010a1f8fdd914f assets/mccourse/models/block/magic_block.json
@@ -73,6 +75,7 @@ a9bd4902ea7c963e22408705eee424b77bf59259 assets/mccourse/models/item/black_opal_
 7d2661b7727be85708cff7b1245f210b65a2240a assets/mccourse/models/item/black_opal_slab.json
 2d8d7242b35fd03381f9b30ab61db1cf40c87b5c assets/mccourse/models/item/black_opal_stairs.json
 0c6874680e04fe3e5ee9b6996942bfb786656edb assets/mccourse/models/item/black_opal_trapdoor.json
+bee137067ab316ff0baae93a056e9e6f37603496 assets/mccourse/models/item/colored_leaves.json
 223757c4241091bfdf0ffec6e73f25dd668c053f assets/mccourse/models/item/deepslate_black_opal_ore.json
 d62b5d617a7b107b3a0c22c7ba82f4edb69d7c30 assets/mccourse/models/item/end_black_opal_ore.json
 81592028bd20273a9ad8afaf67ef7059fbe88e93 assets/mccourse/models/item/magic_block.json
