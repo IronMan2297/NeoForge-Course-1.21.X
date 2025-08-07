@@ -21,8 +21,9 @@
 
   "item.mccourse.metal_detector": "Metal Detector",
   "item.mccourse.data_tablet": "Data Tablet",
-
   "item.mccourse.kaupen_bow": "Kaupen Bow",
+
+  "item.mccourse.tomato_seeds": "Tomato Seeds",
 
   "item.mccourse.penguin_spawn_egg": "Penguin Spawn Egg",
 
@@ -50,6 +51,8 @@
   "block.mccourse.black_opal_trapdoor": "Black Opal Trapdoor",
 
   "block.mccourse.black_opal_lamp": "Black Opal Lamp",
+
+  "block.mccourse.tomato_crop": "Tomato Crop",
 
 
   "tooltip.mccourse.chainsaw.tooltip.shift": "Press §eShift§r for more Information!",

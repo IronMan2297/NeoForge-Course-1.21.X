@@ -1,6 +1,7 @@
 package de.ironman.mccourse.item;
 
 import de.ironman.mccourse.MCCourseMod;
+import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.entity.ModEntities;
 import de.ironman.mccourse.item.custom.*;
 import net.minecraft.network.chat.Component;
@@ -77,6 +78,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> KAUPEN_BOW = ITEMS.register("kaupen_bow",
             () -> new BowItem(new Item.Properties().durability(512)));
+
+    public static final DeferredItem<Item> TOMATO_SEEDS = ITEMS.register("tomato_seeds",
+            () -> new ItemNameBlockItem(ModBlocks.TOMATO_CROP.get(), new Item.Properties()));
 
     public static final DeferredItem<Item> PENGUIN_SPAWN_EGG = ITEMS.register("penguin_spawn_egg",
             () -> new DeferredSpawnEggItem(ModEntities.PENGUIN, 0xdebd47, 0xccbfbe,

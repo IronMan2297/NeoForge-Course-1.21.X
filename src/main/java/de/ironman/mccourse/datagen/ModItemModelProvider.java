@@ -41,13 +41,15 @@ public class ModItemModelProvider extends ItemModelProvider {
         handheldItem(ModItems.BLACK_OPAL_PAXEL);
         handheldItem(ModItems.BLACK_OPAL_HAMMER);
 
-        basicItem(ModItems.METAL_DETECTOR.get());
-        // basicItem(ModItems.DATA_TABLET.get());
-
         basicItem(ModItems.BLACK_OPAL_HELMET.get());
         basicItem(ModItems.BLACK_OPAL_CHESTPLATE.get());
         basicItem(ModItems.BLACK_OPAL_LEGGINGS.get());
         basicItem(ModItems.BLACK_OPAL_BOOTS.get());
+
+        basicItem(ModItems.METAL_DETECTOR.get());
+        // basicItem(ModItems.DATA_TABLET.get());
+
+        basicItem(ModItems.TOMATO_SEEDS.get());
 
         withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
