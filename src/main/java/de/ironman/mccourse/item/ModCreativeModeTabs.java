@@ -49,6 +49,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.TOMATO_SEEDS);
 
+                        pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
+
                         pOutput.accept(ModItems.PENGUIN_SPAWN_EGG);
 
                     }).build());
