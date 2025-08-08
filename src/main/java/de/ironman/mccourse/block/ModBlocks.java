@@ -3,6 +3,7 @@ package de.ironman.mccourse.block;
 import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.custom.BlackOpalLampBlock;
 import de.ironman.mccourse.block.custom.MagicBlock;
+import de.ironman.mccourse.block.custom.PedestalBlock;
 import de.ironman.mccourse.block.custom.TomatoCropBlock;
 import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.sound.ModSounds;
@@ -85,6 +86,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> COLORED_LEAVES = registerBlock("colored_leaves",
             () -> new Block(BlockBehaviour.Properties.of().noOcclusion().sound(SoundType.CHERRY_LEAVES)));
+
+    public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",
+            () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

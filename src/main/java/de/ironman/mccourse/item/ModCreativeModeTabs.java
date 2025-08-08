@@ -89,6 +89,8 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.PETUNIA);
                         pOutput.accept(ModBlocks.COLORED_LEAVES);
 
+                        pOutput.accept(ModBlocks.PEDESTAL);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {
