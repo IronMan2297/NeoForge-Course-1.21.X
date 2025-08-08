@@ -2,6 +2,7 @@ package de.ironman.mccourse;
 
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.component.ModDataComponentTypes;
+import de.ironman.mccourse.effect.ModEffects;
 import de.ironman.mccourse.entity.ModEntities;
 import de.ironman.mccourse.entity.client.PenguinRenderer;
 import de.ironman.mccourse.item.ModArmorMaterials;
@@ -58,6 +59,7 @@ public class MCCourseMod {
         ModDataComponentTypes.register(modEventBus);
 
         ModSounds.register(modEventBus);
+        ModEffects.register(modEventBus);
 
         ModEntities.register(modEventBus);
 
