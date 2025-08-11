@@ -6,6 +6,7 @@ import de.ironman.mccourse.command.SetHomeCommand;
 import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.item.custom.HammerItem;
 import de.ironman.mccourse.potion.ModPotions;
+import de.ironman.mccourse.villager.ModVillagers;
 import it.unimi.dsi.fastutil.ints.Int2ObjectMap;
 import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
@@ -125,12 +126,28 @@ public class ModEvents {
             ));
 
         }
+
         if(event.getType() == VillagerProfession.TOOLSMITH) {
             Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
 
             trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
                     new ItemCost(Items.EMERALD, 12),
                     new ItemStack(ModItems.BLACK_OPAL_HAMMER.get(), 1), 2, 6, 0.05f
+            ));
+
+        }
+
+        if(event.getType() == ModVillagers.KAUPENGER.value()) {
+            Int2ObjectMap<List<VillagerTrades.ItemListing>> trades = event.getTrades();
+
+            trades.get(1).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 5),
+                    new ItemStack(ModItems.FROSTFIRE_ICE.get(), 1), 4, 3, 0.05f
+            ));
+
+            trades.get(2).add((pTrader, pRandom) -> new MerchantOffer(
+                    new ItemCost(Items.EMERALD, 24),
+                    new ItemStack(ModItems.RADIATION_STAFF.get(), 1), 2, 6, 0.05f
             ));
 
         }

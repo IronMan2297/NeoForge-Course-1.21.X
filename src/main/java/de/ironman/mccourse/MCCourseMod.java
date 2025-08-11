@@ -11,6 +11,7 @@ import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.potion.ModPotions;
 import de.ironman.mccourse.sound.ModSounds;
 import de.ironman.mccourse.util.ModItemProperties;
+import de.ironman.mccourse.villager.ModVillagers;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -60,8 +61,11 @@ public class MCCourseMod {
         ModDataComponentTypes.register(modEventBus);
 
         ModSounds.register(modEventBus);
+
         ModEffects.register(modEventBus);
         ModPotions.register(modEventBus);
+
+        ModVillagers.register(modEventBus);
 
         ModEntities.register(modEventBus);
 
