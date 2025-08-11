@@ -8,6 +8,7 @@ import de.ironman.mccourse.entity.client.PenguinRenderer;
 import de.ironman.mccourse.item.ModArmorMaterials;
 import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
+import de.ironman.mccourse.potion.ModPotions;
 import de.ironman.mccourse.sound.ModSounds;
 import de.ironman.mccourse.util.ModItemProperties;
 import net.minecraft.client.renderer.BiomeColors;
@@ -60,6 +61,7 @@ public class MCCourseMod {
 
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
+        ModPotions.register(modEventBus);
 
         ModEntities.register(modEventBus);
 
