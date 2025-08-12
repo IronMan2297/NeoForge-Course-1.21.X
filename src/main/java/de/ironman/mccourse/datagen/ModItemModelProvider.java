@@ -2,6 +2,7 @@ package de.ironman.mccourse.datagen;
 
 import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.ModBlocks;
+import de.ironman.mccourse.fluid.ModFluids;
 import de.ironman.mccourse.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -53,6 +54,7 @@ public class ModItemModelProvider extends ItemModelProvider {
         flowerItem(ModBlocks.PETUNIA);
 
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
+        basicItem(ModFluids.BLACK_OPAL_WATER_BUCKET.get());
 
         withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }

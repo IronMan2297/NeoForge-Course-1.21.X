@@ -2,6 +2,7 @@ package de.ironman.mccourse.item;
 
 import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.ModBlocks;
+import de.ironman.mccourse.fluid.ModFluids;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceLocation;
@@ -51,6 +52,8 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
                         pOutput.accept(ModItems.RADIATION_STAFF);
+
+                        pOutput.accept(ModFluids.BLACK_OPAL_WATER_BUCKET);
 
                         pOutput.accept(ModItems.PENGUIN_SPAWN_EGG);
 

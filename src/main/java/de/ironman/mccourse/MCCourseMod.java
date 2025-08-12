@@ -5,6 +5,9 @@ import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.effect.ModEffects;
 import de.ironman.mccourse.entity.ModEntities;
 import de.ironman.mccourse.entity.client.PenguinRenderer;
+import de.ironman.mccourse.fluid.BaseFluidType;
+import de.ironman.mccourse.fluid.ModFluidTypes;
+import de.ironman.mccourse.fluid.ModFluids;
 import de.ironman.mccourse.item.ModArmorMaterials;
 import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
@@ -13,11 +16,14 @@ import de.ironman.mccourse.sound.ModSounds;
 import de.ironman.mccourse.util.ModItemProperties;
 import de.ironman.mccourse.villager.ModVillagers;
 import net.minecraft.client.renderer.BiomeColors;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.FoliageColor;
 import net.minecraft.world.level.block.FlowerPotBlock;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
 import org.slf4j.Logger;
 
 import com.mojang.logging.LogUtils;
@@ -56,19 +62,14 @@ public class MCCourseMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-        ModArmorMaterials.register(modEventBus);
-
-        ModDataComponentTypes.register(modEventBus);
-
         ModSounds.register(modEventBus);
-
         ModEffects.register(modEventBus);
-        ModPotions.register(modEventBus);
 
+        ModPotions.register(modEventBus);
         ModVillagers.register(modEventBus);
 
-        ModEntities.register(modEventBus);
-
+        ModFluidTypes.register(modEventBus);
+        ModFluids.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
@@ -83,9 +84,15 @@ public class MCCourseMod {
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        event.enqueueWork(() -> {
-            ((FlowerPotBlock) Blocks.FLOWER_POT).addPlant(ModBlocks.PETUNIA.getId(), ModBlocks.POTTED_PETUNIA);
-        });
+        // Some common setup code
+        LOGGER.info("HELLO FROM COMMON SETUP");
+
+        if (Config.logDirtBlock)
+            LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
+
+        LOGGER.info(Config.magicNumberIntroduction + Config.magicNumber);
+
+        Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
     // Add the example block item to the building blocks tab
@@ -108,18 +115,16 @@ public class MCCourseMod {
     public static class ClientModEvents {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
-            ModItemProperties.addCustomItemProperties();
+            event.enqueueWork(() -> {
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_BLACK_OPAL_WATER.get(), RenderType.translucent());
+                ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_BLACK_OPAL_WATER.get(), RenderType.translucent());
+            });
         }
 
         @SubscribeEvent
-        public static void registerColoredBlocks(RegisterColorHandlersEvent.Block event) {
-            event.register((pState, pLevel, pPos, pTintIndex) -> pLevel != null &&
-                    pPos != null ? BiomeColors.getAverageFoliageColor(pLevel, pPos) : FoliageColor.getDefaultColor(), ModBlocks.COLORED_LEAVES.get());
-        }
-
-        @SubscribeEvent
-        public static void registerColoredItems(RegisterColorHandlersEvent.Item event) {
-            event.register((pStack, pTintIndex) -> FoliageColor.getDefaultColor(), ModBlocks.COLORED_LEAVES);
+        public static void onClientExtensions(RegisterClientExtensionsEvent event) {
+            event.registerFluidType(((BaseFluidType) ModFluidTypes.BLACK_OPAL_WATER_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
+                    ModFluidTypes.BLACK_OPAL_WATER_FLUID_TYPE.get());
         }
     }
 }
