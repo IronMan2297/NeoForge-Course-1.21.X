@@ -92,6 +92,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.COLORED_LEAVES);
 
                         pOutput.accept(ModBlocks.PEDESTAL);
+                        pOutput.accept(ModBlocks.CRYSTALLIZER);
 
                     }).build());
 

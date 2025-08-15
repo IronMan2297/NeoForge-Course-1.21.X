@@ -1,10 +1,7 @@
 package de.ironman.mccourse.block;
 
 import de.ironman.mccourse.MCCourseMod;
-import de.ironman.mccourse.block.custom.BlackOpalLampBlock;
-import de.ironman.mccourse.block.custom.MagicBlock;
-import de.ironman.mccourse.block.custom.PedestalBlock;
-import de.ironman.mccourse.block.custom.TomatoCropBlock;
+import de.ironman.mccourse.block.custom.*;
 import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.sound.ModSounds;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -89,6 +86,9 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> PEDESTAL = registerBlock("pedestal",
             () -> new PedestalBlock(BlockBehaviour.Properties.of().noOcclusion()));
+
+    public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer",
+            () -> new CrystallizerBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

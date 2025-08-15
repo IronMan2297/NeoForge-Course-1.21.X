@@ -63,6 +63,8 @@ public class ModBlockStateProvider extends BlockStateProvider {
                 blockTexture(ModBlocks.PETUNIA.get())).renderType("cutout"));
 
         leavesBlock(ModBlocks.COLORED_LEAVES);
+
+        horizontalBlock(ModBlocks.CRYSTALLIZER.get(), mcLoc("block/blast_furnace_side"), modLoc("block/crystallizer_front"), mcLoc("block/blast_furnace_top"));
     }
 
     private void customLamp() {
