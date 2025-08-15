@@ -3,6 +3,8 @@ package de.ironman.mccourse.item.custom;
 import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.sound.ModSounds;
 import net.minecraft.client.gui.screens.Screen;
+import net.minecraft.client.multiplayer.ClientLevel;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.server.level.ServerPlayer;
@@ -38,6 +40,10 @@ public class ChainsawItem extends Item {
 
                 pContext.getLevel().playSound(null, pContext.getPlayer(), ModSounds.CHAINSAW_CUT.get(),
                         SoundSource.PLAYERS, 1f, 1f);
+
+                // Server Particles (Via Server, Seen by all Players)
+                ((ServerLevel) pContext.getLevel()).sendParticles(ParticleTypes.SMOKE, pContext.getClickedPos().getX() + 0.5f, pContext.getClickedPos().getY() + 1.0f,
+                        pContext.getClickedPos().getZ() + 0.05f, 25, 0.0, 0.05, 0.0, 0.15f);
             } else {
                 pContext.getLevel().playSound(null, pContext.getPlayer(), ModSounds.CHAINSAW_PULL.get(),
                         SoundSource.PLAYERS, 1f, 1f);
