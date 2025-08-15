@@ -4,6 +4,7 @@ import com.mojang.logging.LogUtils;
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.effect.ModEffects;
+import de.ironman.mccourse.entchantment.ModEnchantmentEffects;
 import de.ironman.mccourse.fluid.BaseFluidType;
 import de.ironman.mccourse.fluid.ModFluidTypes;
 import de.ironman.mccourse.fluid.ModFluids;
@@ -56,7 +57,6 @@ public class MCCourseMod {
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
-
         ModArmorMaterials.register(modEventBus);
 
         ModDataComponentTypes.register(modEventBus);
@@ -69,6 +69,8 @@ public class MCCourseMod {
 
         ModFluidTypes.register(modEventBus);
         ModFluids.register(modEventBus);
+
+        ModEnchantmentEffects.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
