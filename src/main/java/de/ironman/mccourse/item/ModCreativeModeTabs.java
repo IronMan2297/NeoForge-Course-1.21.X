@@ -55,8 +55,6 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModFluids.BLACK_OPAL_WATER_BUCKET);
 
-                        pOutput.accept(ModItems.PENGUIN_SPAWN_EGG);
-
                     }).build());
 
     public static final Supplier<CreativeModeTab> BLACK_OPAL_BLOCKS_TAB =

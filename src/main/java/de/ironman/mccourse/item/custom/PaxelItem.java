@@ -9,7 +9,6 @@ import net.minecraft.core.Direction;
 import net.minecraft.server.level.ServerPlayer;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
-import net.minecraft.tags.TagKey;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.LivingEntity;
@@ -26,8 +25,8 @@ import net.minecraft.world.level.block.CampfireBlock;
 import net.minecraft.world.level.block.RotatedPillarBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.gameevent.GameEvent;
-import net.neoforged.neoforge.common.ToolAction;
-import net.neoforged.neoforge.common.ToolActions;
+import net.neoforged.neoforge.common.ItemAbility;
+import net.neoforged.neoforge.common.ItemAbilities;
 
 import javax.annotation.Nullable;
 import java.util.Map;
@@ -86,7 +85,7 @@ public class PaxelItem extends DiggerItem {
                 if (context.getClickedFace() == Direction.DOWN) {
                     return InteractionResult.PASS;
                 } else {
-                    BlockState blockstate1 = blockstate.getToolModifiedState(context, net.neoforged.neoforge.common.ToolActions.SHOVEL_FLATTEN, false);
+                    BlockState blockstate1 = blockstate.getToolModifiedState(context, ItemAbilities.SHOVEL_FLATTEN, false);
                     BlockState blockstate2 = null;
                     if (blockstate1 != null && level.getBlockState(blockpos.above()).isAir()) {
                         level.playSound(player, blockpos, SoundEvents.SHOVEL_FLATTEN, SoundSource.BLOCKS, 1.0F, 1.0F);
@@ -132,18 +131,18 @@ public class PaxelItem extends DiggerItem {
     }
 
     private Optional<BlockState> evaluateNewBlockState(Level level, BlockPos pos, @Nullable Player player, BlockState state, UseOnContext p_40529_) {
-        Optional<BlockState> optional = Optional.ofNullable(state.getToolModifiedState(p_40529_, ToolActions.AXE_STRIP, false));
+        Optional<BlockState> optional = Optional.ofNullable(state.getToolModifiedState(p_40529_, ItemAbilities.AXE_STRIP, false));
         if (optional.isPresent()) {
             level.playSound(player, pos, SoundEvents.AXE_STRIP, SoundSource.BLOCKS, 1.0F, 1.0F);
             return optional;
         } else {
-            Optional<BlockState> optional1 = Optional.ofNullable(state.getToolModifiedState(p_40529_, ToolActions.AXE_SCRAPE, false));
+            Optional<BlockState> optional1 = Optional.ofNullable(state.getToolModifiedState(p_40529_, ItemAbilities.AXE_SCRAPE, false));
             if (optional1.isPresent()) {
                 level.playSound(player, pos, SoundEvents.AXE_SCRAPE, SoundSource.BLOCKS, 1.0F, 1.0F);
                 level.levelEvent(player, 3005, pos, 0);
                 return optional1;
             } else {
-                Optional<BlockState> optional2 = Optional.ofNullable(state.getToolModifiedState(p_40529_, ToolActions.AXE_WAX_OFF, false));
+                Optional<BlockState> optional2 = Optional.ofNullable(state.getToolModifiedState(p_40529_, ItemAbilities.AXE_WAX_OFF, false));
                 if (optional2.isPresent()) {
                     level.playSound(player, pos, SoundEvents.AXE_WAX_OFF, SoundSource.BLOCKS, 1.0F, 1.0F);
                     level.levelEvent(player, 3004, pos, 0);
@@ -166,7 +165,7 @@ public class PaxelItem extends DiggerItem {
         });
     }
 
-    public boolean canPerformAction(ItemStack stack, ToolAction toolAction) {
-        return ToolActions.DEFAULT_AXE_ACTIONS.contains(toolAction) || ToolActions.DEFAULT_SHOVEL_ACTIONS.contains(toolAction);
+    public boolean canPerformAction(ItemStack stack, ItemAbility itemAbility) {
+        return ItemAbilities.DEFAULT_AXE_ACTIONS.contains(itemAbility) || ItemAbilities.DEFAULT_SHOVEL_ACTIONS.contains(itemAbility);
     }
 }

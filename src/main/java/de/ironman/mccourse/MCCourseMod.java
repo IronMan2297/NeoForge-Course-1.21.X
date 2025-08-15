@@ -1,10 +1,9 @@
 package de.ironman.mccourse;
 
+import com.mojang.logging.LogUtils;
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.effect.ModEffects;
-import de.ironman.mccourse.entity.ModEntities;
-import de.ironman.mccourse.entity.client.PenguinRenderer;
 import de.ironman.mccourse.fluid.BaseFluidType;
 import de.ironman.mccourse.fluid.ModFluidTypes;
 import de.ironman.mccourse.fluid.ModFluids;
@@ -18,17 +17,9 @@ import de.ironman.mccourse.villager.ModVillagers;
 import net.minecraft.client.renderer.BiomeColors;
 import net.minecraft.client.renderer.ItemBlockRenderTypes;
 import net.minecraft.client.renderer.RenderType;
-import net.minecraft.client.renderer.entity.EntityRenderers;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.FoliageColor;
-import net.minecraft.world.level.block.FlowerPotBlock;
-import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
-import net.neoforged.neoforge.client.extensions.common.IClientFluidTypeExtensions;
-import org.slf4j.Logger;
-
-import com.mojang.logging.LogUtils;
-
-import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.Blocks;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
@@ -39,9 +30,12 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
+import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
+import org.slf4j.Logger;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(MCCourseMod.MOD_ID)
@@ -61,6 +55,11 @@ public class MCCourseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+
+        ModArmorMaterials.register(modEventBus);
+
+        ModDataComponentTypes.register(modEventBus);
 
         ModSounds.register(modEventBus);
         ModEffects.register(modEventBus);
@@ -116,6 +115,7 @@ public class MCCourseMod {
         @SubscribeEvent
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
+                ModItemProperties.addCustomItemProperties();
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_BLACK_OPAL_WATER.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_BLACK_OPAL_WATER.get(), RenderType.translucent());
             });
@@ -125,6 +125,17 @@ public class MCCourseMod {
         public static void onClientExtensions(RegisterClientExtensionsEvent event) {
             event.registerFluidType(((BaseFluidType) ModFluidTypes.BLACK_OPAL_WATER_FLUID_TYPE.get()).getClientFluidTypeExtensions(),
                     ModFluidTypes.BLACK_OPAL_WATER_FLUID_TYPE.get());
+        }
+
+        @SubscribeEvent
+        public static void registerColoredBlocks(RegisterColorHandlersEvent.Block event) {
+            event.register((pState, pLevel, pPos, pTintIndex) -> pLevel != null &&
+                    pPos != null ? BiomeColors.getAverageFoliageColor(pLevel, pPos) : FoliageColor.getDefaultColor(), ModBlocks.COLORED_LEAVES.get());
+        }
+
+        @SubscribeEvent
+        public static void registerColoredItems(RegisterColorHandlersEvent.Item event) {
+            event.register((pStack, pTintIndex) -> FoliageColor.getDefaultColor(), ModBlocks.COLORED_LEAVES);
         }
     }
 }

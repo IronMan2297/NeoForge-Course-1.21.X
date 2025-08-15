@@ -55,8 +55,6 @@ public class ModItemModelProvider extends ItemModelProvider {
 
         basicItem(ModItems.BAR_BRAWL_MUSIC_DISC.get());
         basicItem(ModFluids.BLACK_OPAL_WATER_BUCKET.get());
-
-        withExistingParent(ModItems.PENGUIN_SPAWN_EGG.getId().getPath(), mcLoc("item/template_spawn_egg"));
     }
 
     public void flowerItem(DeferredBlock<Block> block) {
