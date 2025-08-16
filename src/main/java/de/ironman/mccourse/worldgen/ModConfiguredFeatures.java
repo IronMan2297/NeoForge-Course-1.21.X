@@ -9,7 +9,11 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.util.valueproviders.ConstantInt;
+import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.levelgen.GeodeBlockSettings;
+import net.minecraft.world.level.levelgen.GeodeCrackSettings;
+import net.minecraft.world.level.levelgen.GeodeLayerSettings;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
@@ -20,7 +24,6 @@ import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlac
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
-import net.neoforged.neoforge.common.Tags;
 
 import java.util.List;
 
@@ -32,6 +35,8 @@ public class ModConfiguredFeatures {
     public static final ResourceKey<ConfiguredFeature<?, ?>> NETHER_BLACK_OPAL_ORE_KEY = registerKey("nether_black_opal_ore");
 
     public static final ResourceKey<ConfiguredFeature<?, ?>> PETUNIA_KEY = registerKey("petunia");
+
+    public static final ResourceKey<ConfiguredFeature<?, ?>> BLACK_OPAL_GEODE_KEY = registerKey("black_opal_geode");
 
     public static void bootstrap(BootstrapContext<ConfiguredFeature<?, ?>> context) {
 
@@ -60,6 +65,19 @@ public class ModConfiguredFeatures {
         register(context, PETUNIA_KEY, Feature.FLOWER, new RandomPatchConfiguration(32, 6, 2,
                 PlacementUtils.onlyWhenEmpty(Feature.SIMPLE_BLOCK, new SimpleBlockConfiguration(BlockStateProvider.simple(ModBlocks.PETUNIA.get())))));
 
+        register(context, BLACK_OPAL_GEODE_KEY, Feature.GEODE,
+                new GeodeConfiguration(new GeodeBlockSettings(BlockStateProvider.simple(Blocks.AIR),
+                        BlockStateProvider.simple(Blocks.DEEPSLATE),
+                        BlockStateProvider.simple(ModBlocks.BLACK_OPAL_ORE.get()),
+                        BlockStateProvider.simple(Blocks.DIRT),
+                        BlockStateProvider.simple(Blocks.EMERALD_BLOCK),
+                        List.of(ModBlocks.BLACK_OPAL_BLOCK.get().defaultBlockState()),
+                        BlockTags.FEATURES_CANNOT_REPLACE , BlockTags.GEODE_INVALID_BLOCKS),
+                        new GeodeLayerSettings(1.7D, 1.2D, 2.5D, 3.5D),
+                        new GeodeCrackSettings(0.25D, 1.5D, 1), 0.5D, 0.1D,
+                        true, UniformInt.of(3, 8),
+                        UniformInt.of(2, 6), UniformInt.of(1, 2),
+                        -18, 18, 0.075D, 1));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
