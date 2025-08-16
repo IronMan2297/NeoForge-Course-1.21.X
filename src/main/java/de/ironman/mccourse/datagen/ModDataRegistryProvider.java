@@ -18,4 +18,9 @@ public class ModDataRegistryProvider extends DatapackBuiltinEntriesProvider {
     public ModDataRegistryProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(MCCourseMod.MOD_ID));
     }
+
+    @Override
+    public String getName() {
+        return "Data Registries";
+    }
 }

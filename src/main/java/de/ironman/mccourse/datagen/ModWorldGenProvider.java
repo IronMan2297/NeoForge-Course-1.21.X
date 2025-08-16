@@ -23,4 +23,9 @@ public class ModWorldGenProvider extends DatapackBuiltinEntriesProvider {
     public ModWorldGenProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(MCCourseMod.MOD_ID));
     }
+
+    @Override
+    public String getName() {
+        return "WorldGen Registries";
+    }
 }

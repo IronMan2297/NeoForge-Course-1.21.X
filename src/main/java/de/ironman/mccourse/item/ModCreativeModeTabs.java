@@ -94,6 +94,13 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModBlocks.PEDESTAL);
                         pOutput.accept(ModBlocks.CRYSTALLIZER);
 
+                        pOutput.accept(ModBlocks.EBONY_LOG);
+                        pOutput.accept(ModBlocks.EBONY_WOOD);
+                        pOutput.accept(ModBlocks.STRIPPED_EBONY_LOG);
+                        pOutput.accept(ModBlocks.STRIPPED_EBONY_WOOD);
+                        pOutput.accept(ModBlocks.EBONY_PLANKS);
+                        pOutput.accept(ModBlocks.EBONY_SAPLING);
+
                     }).build());
 
     public static void register(IEventBus eventBus) {
