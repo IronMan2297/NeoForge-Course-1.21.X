@@ -6,6 +6,7 @@ import de.ironman.mccourse.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
@@ -109,6 +110,8 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('B', ModItems.BLACK_OPAL.get())
                 .define('S', Items.STICK)
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
+
+             planksFromLog(recipeOutput, ModBlocks.EBONY_LOG, ItemTags.PLANKS, 4); // TEST
     }
 
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,

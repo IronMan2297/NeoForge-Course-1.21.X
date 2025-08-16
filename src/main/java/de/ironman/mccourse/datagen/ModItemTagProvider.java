@@ -1,11 +1,13 @@
 package de.ironman.mccourse.datagen;
 
 import de.ironman.mccourse.MCCourseMod;
+import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.util.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.tags.ItemTagsProvider;
+import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.neoforged.neoforge.common.data.ExistingFileHelper;
@@ -26,5 +28,14 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.COAL)
                 .add(Items.DANDELION)
                 .add(Items.COMPASS);
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModBlocks.EBONY_LOG.get().asItem())
+                .add(ModBlocks.EBONY_WOOD.get().asItem())
+                .add(ModBlocks.STRIPPED_EBONY_LOG.get().asItem())
+                .add(ModBlocks.STRIPPED_EBONY_WOOD.get().asItem());
+
+        tag(ItemTags.PLANKS)
+                .add(ModBlocks.EBONY_PLANKS.get().asItem());
     }
 }

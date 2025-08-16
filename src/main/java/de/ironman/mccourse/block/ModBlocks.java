@@ -4,12 +4,17 @@ import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.custom.*;
 import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.sound.ModSounds;
+import de.ironman.mccourse.worldgen.tree.ModTreeGrowers;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.WoodType;
 import net.neoforged.bus.api.IEventBus;
@@ -89,6 +94,55 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer",
             () -> new CrystallizerBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> EBONY_LOG = registerBlock("ebony_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
+    public static final DeferredBlock<Block> EBONY_WOOD = registerBlock("ebony_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_WOOD)));
+    public static final DeferredBlock<Block> STRIPPED_EBONY_LOG = registerBlock("stripped_ebony_log",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_LOG)));
+    public static final DeferredBlock<Block> STRIPPED_EBONY_WOOD = registerBlock("stripped_ebony_wood",
+            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.STRIPPED_OAK_WOOD)));
+
+
+    public static final DeferredBlock<Block> EBONY_PLANKS = registerBlock("ebony_planks",
+            () -> new Block(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+    public static final DeferredBlock<Block> EBONY_LEAVES = registerBlock("ebony_leaves",
+            () -> new LeavesBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LEAVES)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
+
+    public static final DeferredBlock<Block> EBONY_SAPLING = registerBlock("ebony_sapling",
+            () -> new SaplingBlock(ModTreeGrowers.EBONY, BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_SAPLING)));
+
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

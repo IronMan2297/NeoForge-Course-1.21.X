@@ -71,6 +71,15 @@
   "block.mccourse.pedestal": "Pedestal",
   "block.mccourse.crystallizer": "Crystallizer",
 
+  "block.mccourse.ebony_log": "Ebony Log",
+  "block.mccourse.ebony_planks": "Ebony Planks",
+  "block.mccourse.ebony_wood": "Ebony Wood",
+  "block.mccourse.stripped_ebony_log": "Stripped Ebony Log",
+  "block.mccourse.stripped_ebony_wood": "Stripped Ebony Wood",
+  "block.mccourse.ebony_leaves": "Ebony Leaves",
+
+  "block.mccourse.ebony_sapling": "Ebony Sapling",
+
   "effect.mccourse.slimey": "Slimey",
 
   "entity.minecraft.villager.mccourse.kaupenger": "Kaupenger",

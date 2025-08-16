@@ -4,6 +4,7 @@ import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.block.custom.BlackOpalLampBlock;
 import de.ironman.mccourse.block.custom.TomatoCropBlock;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
@@ -65,6 +66,22 @@ public class ModBlockStateProvider extends BlockStateProvider {
         leavesBlock(ModBlocks.COLORED_LEAVES);
 
         horizontalBlock(ModBlocks.CRYSTALLIZER.get(), mcLoc("block/blast_furnace_side"), modLoc("block/crystallizer_front"), mcLoc("block/blast_furnace_top"));
+
+        logBlock(((RotatedPillarBlock) ModBlocks.EBONY_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.EBONY_WOOD.get()), blockTexture(ModBlocks.EBONY_LOG.get()), blockTexture(ModBlocks.EBONY_LOG.get()));
+        logBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_EBONY_LOG.get()));
+        axisBlock(((RotatedPillarBlock) ModBlocks.STRIPPED_EBONY_WOOD.get()), blockTexture(ModBlocks.STRIPPED_EBONY_LOG.get()), blockTexture(ModBlocks.STRIPPED_EBONY_WOOD.get()));
+
+        blockItem(ModBlocks.EBONY_LOG);
+        blockItem(ModBlocks.EBONY_WOOD);
+        blockItem(ModBlocks.STRIPPED_EBONY_LOG);
+        blockItem(ModBlocks.STRIPPED_EBONY_WOOD);
+
+        blockWithItem(ModBlocks.EBONY_PLANKS);
+
+        leavesBlock(ModBlocks.EBONY_LEAVES);
+        saplingBlock(ModBlocks.EBONY_SAPLING);
+
     }
 
     private void customLamp() {
@@ -85,6 +102,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
         simpleBlockWithItem(deferredBlock.get(),
                 models().singleTexture(deferredBlock.getId().getPath(), ResourceLocation.parse("minecraft:block/leaves"),
                         "all", blockTexture(deferredBlock.get())).renderType("cutout"));
+    }
+
+    private void saplingBlock(DeferredBlock<Block> deferredBlock) {
+        simpleBlock(deferredBlock.get(), models().cross(BuiltInRegistries.BLOCK.getKey(deferredBlock.get()).getPath(), blockTexture(deferredBlock.get())).renderType("cutout"));
     }
 
     private void makeCrop(CropBlock block, String modelName, String textureName) {
