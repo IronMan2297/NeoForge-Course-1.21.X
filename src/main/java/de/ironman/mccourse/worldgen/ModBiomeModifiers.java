@@ -51,7 +51,7 @@ public class ModBiomeModifiers {
 
 
         context.register(ADD_PETUNIA, new BiomeModifiers.AddFeaturesBiomeModifier(
-                HolderSet.direct(biomes.getOrThrow(Biomes.PLAINS), biomes.getOrThrow(Biomes.BIRCH_FOREST)),
+                HolderSet.direct(biomes.getOrThrow(Biomes.CRIMSON_FOREST), biomes.getOrThrow(Biomes.NETHER_WASTES)),
                 HolderSet.direct(placedFeatures.getOrThrow(ModPlacedFeatures.PETUNIA_PLACED_KEY)),
                 GenerationStep.Decoration.VEGETAL_DECORATION));
 

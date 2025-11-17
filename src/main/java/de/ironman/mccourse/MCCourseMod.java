@@ -11,6 +11,7 @@ import de.ironman.mccourse.fluid.ModFluids;
 import de.ironman.mccourse.item.ModArmorMaterials;
 import de.ironman.mccourse.item.ModCreativeModeTabs;
 import de.ironman.mccourse.item.ModItems;
+import de.ironman.mccourse.loot.ModLootModifiers;
 import de.ironman.mccourse.potion.ModPotions;
 import de.ironman.mccourse.sound.ModSounds;
 import de.ironman.mccourse.util.ModItemProperties;
@@ -71,6 +72,8 @@ public class MCCourseMod {
         ModFluids.register(modEventBus);
 
         ModEnchantmentEffects.register(modEventBus);
+
+        ModLootModifiers.register(modEventBus);
 
         // Register ourselves for server and other game events we are interested in.
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
