@@ -2,6 +2,7 @@ package de.ironman.mccourse;
 
 import com.mojang.logging.LogUtils;
 import de.ironman.mccourse.block.ModBlocks;
+import de.ironman.mccourse.block.entity.ModBlockEntities;
 import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.effect.ModEffects;
 import de.ironman.mccourse.entchantment.ModEnchantmentEffects;
@@ -57,6 +58,8 @@ public class MCCourseMod {
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
+
+        ModBlockEntities.register(modEventBus);
 
         ModArmorMaterials.register(modEventBus);
 
