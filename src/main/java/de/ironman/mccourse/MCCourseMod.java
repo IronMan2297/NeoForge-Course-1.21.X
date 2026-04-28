@@ -3,6 +3,7 @@ package de.ironman.mccourse;
 import com.mojang.logging.LogUtils;
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.block.entity.ModBlockEntities;
+import de.ironman.mccourse.block.entity.renderer.PedestalBlockEntityRenderer;
 import de.ironman.mccourse.component.ModDataComponentTypes;
 import de.ironman.mccourse.effect.ModEffects;
 import de.ironman.mccourse.entchantment.ModEnchantmentEffects;
@@ -33,6 +34,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.config.ModConfig;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterColorHandlersEvent;
 import net.neoforged.neoforge.client.extensions.common.RegisterClientExtensionsEvent;
 import net.neoforged.neoforge.common.NeoForge;
@@ -127,6 +129,11 @@ public class MCCourseMod {
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.SOURCE_BLACK_OPAL_WATER.get(), RenderType.translucent());
                 ItemBlockRenderTypes.setRenderLayer(ModFluids.FLOWING_BLACK_OPAL_WATER.get(), RenderType.translucent());
             });
+        }
+
+        @SubscribeEvent
+        public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+            event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
         }
 
         @SubscribeEvent
