@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-16T16:00:46.4500172	Recipes
+// 1.21.1	2026-04-28T20:48:34.0390504	Recipes
 4958be86dc8ededa248e438f8ec77757340342d3 data/mccourse/advancement/recipes/building_blocks/black_opal_slab.json
 3a3b666387507279530912650089b8a21a8b6df6 data/mccourse/advancement/recipes/building_blocks/black_opal_stairs.json
 0b26e27c06143f06f353dc4e8bcf0a7803b1892f data/mccourse/advancement/recipes/building_blocks/black_opal_wall.json
@@ -7,6 +7,7 @@
 a2829c76797d68125848c0bfa6f3f4ef54ef7196 data/mccourse/advancement/recipes/building_blocks/stripped_ebony_wood.json
 dea6f1bfc8686448597c8b6b7fcbdd73fd583778 data/mccourse/advancement/recipes/combat/black_opal_sword.json
 8fa737965ef4bf51349419999430b54e11490b54 data/mccourse/advancement/recipes/decorations/black_opal_fence.json
+8a6d7bb2e18c110e288fd5fb761464cb193201f8 data/mccourse/advancement/recipes/decorations/pedestal.json
 81de67c031619c5816eb0e6fd66669cd28766bbe data/mccourse/advancement/recipes/misc/black_opal.json
 55d1bb30905b8a54d492ff18134fce623c598ba2 data/mccourse/advancement/recipes/misc/black_opal_2.json
 70b83c07286263b9de419c0d0b77dcd936eb7150 data/mccourse/advancement/recipes/misc/black_opal_block.json
@@ -60,4 +61,5 @@ fb39c869e3ae32fb4efe9c75707a051505bbabb0 data/mccourse/recipe/black_opal_stairs.
 99943c4531f273a8f3eb6284bc5048450d10ad94 data/mccourse/recipe/black_opal_wall.json
 e9092fd8d08f27cde042625b5c30bf52149f702b data/mccourse/recipe/ebony_planks.json
 1c4a0794e8047808db6d9fb2b05c73b01a431e0b data/mccourse/recipe/ebony_wood.json
+f06b1439fbc9560381127d08565e586179187c7f data/mccourse/recipe/pedestal.json
 a27651f8bf454613ce7bf5b0cec6a13299976a60 data/mccourse/recipe/stripped_ebony_wood.json

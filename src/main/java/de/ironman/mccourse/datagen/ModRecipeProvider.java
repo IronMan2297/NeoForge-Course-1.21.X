@@ -112,6 +112,15 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .define('S', Items.STICK)
                 .unlockedBy("has_black_opal", has(ModItems.BLACK_OPAL.get())).save(recipeOutput);
 
+             ShapedRecipeBuilder.shaped(RecipeCategory.DECORATIONS, ModBlocks.PEDESTAL, 2)
+                 .pattern("SSS")
+                 .pattern(" B ")
+                 .pattern("BBB")
+                 .define('S', Items.SMOOTH_STONE_SLAB)
+                 .define('B', Items.SMOOTH_STONE)
+                 .unlockedBy("has_smooth_stone", has(Items.SMOOTH_STONE)).save(recipeOutput);
+
+
              planksFromLogs(recipeOutput, ModBlocks.EBONY_PLANKS, ItemTags.LOGS_THAT_BURN, 4);
              woodFromLogs(recipeOutput, ModBlocks.EBONY_WOOD, ModBlocks.EBONY_LOG);
              woodFromLogs(recipeOutput, ModBlocks.STRIPPED_EBONY_WOOD, ModBlocks.STRIPPED_EBONY_LOG);
