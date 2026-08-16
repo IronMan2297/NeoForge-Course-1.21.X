@@ -1,4 +1,5 @@
-// 1.21.1	2025-08-16T15:49:17.8665432	Tags for minecraft:item mod id mccourse
+// 1.21.1	2026-08-17T00:30:44.3772735	Tags for minecraft:item mod id mccourse
 e39607bd531fac18f4a1de30ef02439374c7fe37 data/mccourse/tags/item/transformable_items.json
 a4abb3818c75a1dc53b3d47d60740946c18038de data/minecraft/tags/item/logs_that_burn.json
 d897469e72826c67b64a02484f6058d1e6a99522 data/minecraft/tags/item/planks.json
+3dce9288b1d7677353060dcab92e3b9b7cc74a53 data/minecraft/tags/item/trimmable_armor.json

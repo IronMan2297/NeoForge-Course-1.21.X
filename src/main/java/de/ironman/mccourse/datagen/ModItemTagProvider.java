@@ -29,6 +29,12 @@ public class ModItemTagProvider extends ItemTagsProvider {
                 .add(Items.DANDELION)
                 .add(Items.COMPASS);
 
+        this.tag(ItemTags.TRIMMABLE_ARMOR)
+                .add(ModItems.BLACK_OPAL_HELMET.get())
+                .add(ModItems.BLACK_OPAL_CHESTPLATE.get())
+                .add(ModItems.BLACK_OPAL_LEGGINGS.get())
+                .add(ModItems.BLACK_OPAL_BOOTS.get());
+
         tag(ItemTags.LOGS_THAT_BURN)
                 .add(ModBlocks.EBONY_LOG.get().asItem())
                 .add(ModBlocks.EBONY_WOOD.get().asItem())
