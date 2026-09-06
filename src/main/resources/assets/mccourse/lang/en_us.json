@@ -19,6 +19,8 @@
   "item.mccourse.black_opal_leggings": "Black Opal Leggings",
   "item.mccourse.black_opal_boots": "Black Opal Boots",
 
+  "item.mccourse.black_opal_horse_armor": "Black Opal Horse Armor",
+
   "item.mccourse.metal_detector": "Metal Detector",
   "item.mccourse.data_tablet": "Data Tablet",
   "item.mccourse.kaupen_bow": "Kaupen Bow",
@@ -87,7 +89,6 @@
 
   "entity.minecraft.villager.mccourse.kaupenger": "Kaupenger",
 
-  "entity.mccourse.penguin": "Penguin",
 
   "painting.mccourse.world.title": "World",
   "painting.mccourse.world.author": "NanoAttack",

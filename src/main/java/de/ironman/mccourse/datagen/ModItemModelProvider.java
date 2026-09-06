@@ -69,6 +69,8 @@ public class ModItemModelProvider extends ItemModelProvider {
         trimmedArmorItem(ModItems.BLACK_OPAL_LEGGINGS);
         trimmedArmorItem(ModItems.BLACK_OPAL_BOOTS);
 
+        basicItem(ModItems.BLACK_OPAL_HORSE_ARMOR.get());
+
         basicItem(ModItems.METAL_DETECTOR.get());
         // basicItem(ModItems.DATA_TABLET.get());
 

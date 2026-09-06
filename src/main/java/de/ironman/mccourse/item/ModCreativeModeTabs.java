@@ -43,6 +43,7 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.BLACK_OPAL_CHESTPLATE);
                         pOutput.accept(ModItems.BLACK_OPAL_LEGGINGS);
                         pOutput.accept(ModItems.BLACK_OPAL_BOOTS);
+                        pOutput.accept(ModItems.BLACK_OPAL_HORSE_ARMOR);
 
                         pOutput.accept(ModItems.METAL_DETECTOR);
                         pOutput.accept(ModItems.DATA_TABLET);
