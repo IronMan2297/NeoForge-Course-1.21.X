@@ -1,0 +1,10 @@
+{
+  "type": "mccourse:crystallizing",
+  "ingredient": {
+    "item": "mccourse:raw_black_opal"
+  },
+  "result": {
+    "count": 1,
+    "id": "mccourse:black_opal"
+  }
+}

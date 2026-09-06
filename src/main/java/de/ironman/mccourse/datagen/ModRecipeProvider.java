@@ -3,12 +3,15 @@ package de.ironman.mccourse.datagen;
 import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.ModBlocks;
 import de.ironman.mccourse.item.ModItems;
+import de.ironman.mccourse.recipe.CrystallizerRecipeBuilder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.*;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.BlockTags;
 import net.minecraft.tags.ItemTags;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.crafting.*;
 import net.minecraft.world.level.ItemLike;
@@ -124,6 +127,23 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
              planksFromLogs(recipeOutput, ModBlocks.EBONY_PLANKS, ItemTags.LOGS_THAT_BURN, 4);
              woodFromLogs(recipeOutput, ModBlocks.EBONY_WOOD, ModBlocks.EBONY_LOG);
              woodFromLogs(recipeOutput, ModBlocks.STRIPPED_EBONY_WOOD, ModBlocks.STRIPPED_EBONY_LOG);
+
+             crystallizing(recipeOutput, ModItems.RAW_BLACK_OPAL, ModItems.BLACK_OPAL);
+             crystallizing(recipeOutput, Items.STICK, Items.END_ROD, 2);
+    }
+
+    protected static void crystallizing(RecipeOutput pRecipeOutput, ItemLike pInput, ItemLike pOutput) {
+        CrystallizerRecipeBuilder.crystallizing(
+            Ingredient.of(pInput),
+            new ItemStack(pOutput))
+                .save(pRecipeOutput, MCCourseMod.MOD_ID + ":" + getItemName(pOutput) + "_from_" + getItemName(pInput));
+    }
+
+    protected static void crystallizing(RecipeOutput pRecipeOutput, ItemLike pInput, ItemLike pOutput, int pCount) {
+        CrystallizerRecipeBuilder.crystallizing(
+            Ingredient.of(pInput),
+            new ItemStack(pOutput)).count(pCount)
+                .save(pRecipeOutput, MCCourseMod.MOD_ID + ":" + getItemName(pOutput) + "_from_" + getItemName(pInput));
     }
 
     protected static void oreSmelting(RecipeOutput pRecipeOutput, List<ItemLike> pIngredients, RecipeCategory pCategory, ItemLike pResult,
