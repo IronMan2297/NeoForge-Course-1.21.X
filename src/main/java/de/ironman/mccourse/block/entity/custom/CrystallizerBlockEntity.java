@@ -1,5 +1,6 @@
 package de.ironman.mccourse.block.entity.custom;
 
+import de.ironman.mccourse.block.custom.CrystallizerBlock;
 import de.ironman.mccourse.block.entity.ModBlockEntities;
 import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.screen.custom.CrystallizerMenu;
@@ -112,6 +113,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
     public void tick(Level level, BlockPos pos, BlockState state) {
         if(hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             increaseCraftingProcess();
+            level.setBlockAndUpdate(pos, state.setValue(CrystallizerBlock.LIT, true));
             setChanged(level, pos, state);
 
             if(hasCraftingFinished()) {
@@ -121,6 +123,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
 
         } else {
             resetProgress();
+            level.setBlockAndUpdate(pos, state.setValue(CrystallizerBlock.LIT, false));
         }
     }
 

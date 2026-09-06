@@ -9,6 +9,7 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.neoforged.neoforge.client.model.generators.BlockStateProvider;
 import net.neoforged.neoforge.client.model.generators.ConfiguredModel;
 import net.neoforged.neoforge.client.model.generators.ModelFile;
@@ -65,11 +66,10 @@ public class ModBlockStateProvider extends BlockStateProvider {
 
         leavesBlock(ModBlocks.COLORED_LEAVES);
 
-        horizontalBlock(ModBlocks.CRYSTALLIZER.get(), models().orientable("mccourse:crystallizer",
-                mcLoc("block/blast_furnace_side"),
-                modLoc("block/crystallizer_front"),
-                mcLoc("block/blast_furnace_top")));
         blockItem(ModBlocks.CRYSTALLIZER);
+        ModelFile crystallizerOn = models().orientable("crystallizer_on", mcLoc("block/blast_furnace_side"), modLoc("block/crystallizer_front_on"), mcLoc("block/blast_furnace_top"));
+        ModelFile crystallizerOff = models().orientable("crystallizer", mcLoc("block/blast_furnace_side"), modLoc("block/crystallizer_front"), mcLoc("block/blast_furnace_top"));
+        horizontalBlock(ModBlocks.CRYSTALLIZER.get(), blockState -> blockState.getValue(BlockStateProperties.LIT) ? crystallizerOn : crystallizerOff);
 
         logBlock(((RotatedPillarBlock) ModBlocks.EBONY_LOG.get()));
         axisBlock(((RotatedPillarBlock) ModBlocks.EBONY_WOOD.get()), blockTexture(ModBlocks.EBONY_LOG.get()), blockTexture(ModBlocks.EBONY_LOG.get()));
