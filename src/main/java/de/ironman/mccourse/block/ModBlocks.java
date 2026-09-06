@@ -95,6 +95,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer",
             () -> new CrystallizerBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
 
+    // public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer_horizontal",
+    //         () -> new CrystallizerHorizontalBlock(BlockBehaviour.Properties.of().strength(3f).requiresCorrectToolForDrops()));
+
     public static final DeferredBlock<Block> EBONY_LOG = registerBlock("ebony_log",
             () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG)));
     public static final DeferredBlock<Block> EBONY_WOOD = registerBlock("ebony_wood",

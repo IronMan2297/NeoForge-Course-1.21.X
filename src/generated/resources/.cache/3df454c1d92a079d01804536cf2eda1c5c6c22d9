@@ -1,4 +1,4 @@
-// 1.21.1	2025-08-16T15:49:17.8625461	Block States: mccourse
+// 1.21.1	2026-09-07T00:19:14.1340345	Block States: mccourse
 b548ddf1ba2ad5a2d24ac1505a095060da0f300b assets/mccourse/blockstates/black_opal_block.json
 d9ba7c55bae42b6d6fadaef16516e5e401e50636 assets/mccourse/blockstates/black_opal_button.json
 9f1bfcba08c841bdbdb1099c9c5b9c6aeb22bcc9 assets/mccourse/blockstates/black_opal_door.json
@@ -96,6 +96,7 @@ a9bd4902ea7c963e22408705eee424b77bf59259 assets/mccourse/models/item/black_opal_
 2d8d7242b35fd03381f9b30ab61db1cf40c87b5c assets/mccourse/models/item/black_opal_stairs.json
 0c6874680e04fe3e5ee9b6996942bfb786656edb assets/mccourse/models/item/black_opal_trapdoor.json
 bee137067ab316ff0baae93a056e9e6f37603496 assets/mccourse/models/item/colored_leaves.json
+370bb17deeb36c83225b692b78902a12ca210d57 assets/mccourse/models/item/crystallizer.json
 223757c4241091bfdf0ffec6e73f25dd668c053f assets/mccourse/models/item/deepslate_black_opal_ore.json
 f1ca354b201787a1060c6bee8f2f5e7bac0a440c assets/mccourse/models/item/ebony_leaves.json
 901593b4ce6f65cbff5b2158eb12bbf9fcd05607 assets/mccourse/models/item/ebony_log.json

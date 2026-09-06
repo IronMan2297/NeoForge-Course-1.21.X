@@ -72,6 +72,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
 
         dropSelf(ModBlocks.PEDESTAL.get());
         dropSelf(ModBlocks.CRYSTALLIZER.get());
+        // dropSelf(ModBlocks.CRYSTALLIZER.get());
 
         this.dropSelf(ModBlocks.EBONY_LOG.get());
         this.dropSelf(ModBlocks.STRIPPED_EBONY_LOG.get());

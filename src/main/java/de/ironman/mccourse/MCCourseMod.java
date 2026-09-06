@@ -16,6 +16,8 @@ import de.ironman.mccourse.item.ModItems;
 import de.ironman.mccourse.loot.ModLootModifiers;
 import de.ironman.mccourse.potion.ModPotions;
 import de.ironman.mccourse.screen.ModMenuTypes;
+import de.ironman.mccourse.screen.custom.CrystallizerMenu;
+import de.ironman.mccourse.screen.custom.CrystallizerScreen;
 import de.ironman.mccourse.screen.custom.PedestalScreen;
 import de.ironman.mccourse.sound.ModSounds;
 import de.ironman.mccourse.util.ModItemProperties;
@@ -143,6 +145,7 @@ public class MCCourseMod {
         @SubscribeEvent
         public static void registerScreens(RegisterMenuScreensEvent event) {
             event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+            event.register(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
         }
 
         @SubscribeEvent

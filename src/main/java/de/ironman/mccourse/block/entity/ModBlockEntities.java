@@ -2,6 +2,7 @@ package de.ironman.mccourse.block.entity;
 
 import de.ironman.mccourse.MCCourseMod;
 import de.ironman.mccourse.block.ModBlocks;
+import de.ironman.mccourse.block.entity.custom.CrystallizerBlockEntity;
 import de.ironman.mccourse.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -17,6 +18,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
             BLOCK_ENTITIES.register("pedestal_be", () -> BlockEntityType.Builder.of(
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL.get()).build(null));
+
+    public static final Supplier<BlockEntityType<CrystallizerBlockEntity>> CRYSTALLIZER_BE =
+            BLOCK_ENTITIES.register("crsytallizer_be", () -> BlockEntityType.Builder.of(
+                    CrystallizerBlockEntity::new, ModBlocks.CRYSTALLIZER.get()).build(null));
 
     public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);

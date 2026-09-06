@@ -94,6 +94,7 @@ public class ModCreativeModeTabs {
 
                         pOutput.accept(ModBlocks.PEDESTAL);
                         pOutput.accept(ModBlocks.CRYSTALLIZER);
+                        // pOutput.accept(ModBlocks.CRYSTALLIZER);
 
                         pOutput.accept(ModBlocks.EBONY_LOG);
                         pOutput.accept(ModBlocks.EBONY_WOOD);
