@@ -8,6 +8,7 @@ import de.ironman.mccourse.recipe.CrystallizerRecipeInput;
 import de.ironman.mccourse.recipe.ModRecipes;
 import de.ironman.mccourse.screen.custom.CrystallizerMenu;
 import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.Component;
@@ -27,6 +28,7 @@ import net.minecraft.world.item.crafting.RecipeHolder;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
+import net.neoforged.neoforge.items.IItemHandler;
 import net.neoforged.neoforge.items.ItemStackHandler;
 import org.jetbrains.annotations.Nullable;
 
@@ -78,6 +80,10 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
                 return 2;
             }
         };
+    }
+
+    public IItemHandler getItemHandler(Direction direction) {
+        return this.itemHandler;
     }
 
     @Override
